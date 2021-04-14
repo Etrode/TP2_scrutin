@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP2_scrutin", "TP2_scrutin\TP2_scrutin.csproj", "{65B064D2-01C8-4806-8B6C-256DEEC27C10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP2_scrutin.Specs", "TP2_scrutin.Specs\TP2_scrutin.Specs.csproj", "{4E4AF894-1FFA-4405-B182-087DD63FB183}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65B064D2-01C8-4806-8B6C-256DEEC27C10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65B064D2-01C8-4806-8B6C-256DEEC27C10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65B064D2-01C8-4806-8B6C-256DEEC27C10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65B064D2-01C8-4806-8B6C-256DEEC27C10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E4AF894-1FFA-4405-B182-087DD63FB183}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E4AF894-1FFA-4405-B182-087DD63FB183}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E4AF894-1FFA-4405-B182-087DD63FB183}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E4AF894-1FFA-4405-B182-087DD63FB183}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C1807436-085F-4CD6-9EA0-974760227F3E}
+	EndGlobalSection
+EndGlobal
