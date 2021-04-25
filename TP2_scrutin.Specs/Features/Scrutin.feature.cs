@@ -241,6 +241,309 @@ this.ScenarioInitialize(scenarioInfo);
             }
             this.ScenarioCleanup();
         }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("First and second tour WITH a winner", new string[] {
+                "secondTour"}, SourceLine=34)]
+        public virtual void FirstAndSecondTourWITHAWinner()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "secondTour"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("First and second tour WITH a winner", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 35
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                            "FirstName",
+                            "LastName",
+                            "votes"});
+                table4.AddRow(new string[] {
+                            "Monica",
+                            "Geller",
+                            "1"});
+                table4.AddRow(new string[] {
+                            "Rachel",
+                            "Green",
+                            "0"});
+                table4.AddRow(new string[] {
+                            "Ross",
+                            "Geller",
+                            "1"});
+#line 36
+ testRunner.Given("the following votes on the first tour", ((string)(null)), table4, "Given ");
+#line hidden
+#line 41
+ testRunner.And("the closing of the first tour is true", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                            "FirstName",
+                            "LastName",
+                            "votes"});
+                table5.AddRow(new string[] {
+                            "Monica",
+                            "Geller",
+                            "0"});
+                table5.AddRow(new string[] {
+                            "Ross",
+                            "Geller",
+                            "2"});
+#line 42
+ testRunner.And("the following votes on the second tour", ((string)(null)), table5, "And ");
+#line hidden
+#line 46
+ testRunner.And("the closing of the second tour is true", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 47
+ testRunner.When("results are calculated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 48
+ testRunner.Then("the result should be Ross Geller", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("First and second tour WITHOUT a winner", new string[] {
+                "secondTourWihoutWinner"}, SourceLine=50)]
+        public virtual void FirstAndSecondTourWITHOUTAWinner()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "secondTourWihoutWinner"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("First and second tour WITHOUT a winner", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 51
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                            "FirstName",
+                            "LastName",
+                            "votes"});
+                table6.AddRow(new string[] {
+                            "Monica",
+                            "Geller",
+                            "1"});
+                table6.AddRow(new string[] {
+                            "Rachel",
+                            "Green",
+                            "0"});
+                table6.AddRow(new string[] {
+                            "Ross",
+                            "Geller",
+                            "1"});
+#line 52
+ testRunner.Given("the following votes on the first tour", ((string)(null)), table6, "Given ");
+#line hidden
+#line 57
+ testRunner.And("the closing of the first tour is true", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                            "FirstName",
+                            "LastName",
+                            "votes"});
+                table7.AddRow(new string[] {
+                            "Monica",
+                            "Geller",
+                            "1"});
+                table7.AddRow(new string[] {
+                            "Ross",
+                            "Geller",
+                            "1"});
+#line 58
+ testRunner.And("the following votes on the second tour", ((string)(null)), table7, "And ");
+#line hidden
+#line 62
+ testRunner.And("the closing of the second tour is true", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 63
+ testRunner.When("results are calculated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 64
+ testRunner.Then("the result should be No winner", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("The second and third candidate are equals in votes", new string[] {
+                "SecondAndThirdCandidateAreEquals"}, SourceLine=67)]
+        public virtual void TheSecondAndThirdCandidateAreEqualsInVotes()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "SecondAndThirdCandidateAreEquals"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The second and third candidate are equals in votes", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 68
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                            "FirstName",
+                            "LastName",
+                            "votes"});
+                table8.AddRow(new string[] {
+                            "Monica",
+                            "Geller",
+                            "2"});
+                table8.AddRow(new string[] {
+                            "Rachel",
+                            "Green",
+                            "1"});
+                table8.AddRow(new string[] {
+                            "Ross",
+                            "Geller",
+                            "1"});
+#line 69
+ testRunner.Given("the following votes on the first tour", ((string)(null)), table8, "Given ");
+#line hidden
+#line 74
+ testRunner.And("the closing of the first tour is true", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 75
+ testRunner.When("results are calculated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 76
+ testRunner.Then("the result should be The first tour must be replayed because the second and the 3" +
+                        "rd best candidate have the same number of votes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("First and second tour with blank votes", new string[] {
+                "blankVotes"}, SourceLine=79)]
+        public virtual void FirstAndSecondTourWithBlankVotes()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "blankVotes"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("First and second tour with blank votes", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 80
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                            "FirstName",
+                            "LastName",
+                            "votes"});
+                table9.AddRow(new string[] {
+                            "Monica",
+                            "Geller",
+                            "1"});
+                table9.AddRow(new string[] {
+                            "Rachel",
+                            "Green",
+                            "0"});
+                table9.AddRow(new string[] {
+                            "Ross",
+                            "Geller",
+                            "1"});
+                table9.AddRow(new string[] {
+                            "Blank",
+                            "Votes",
+                            "5"});
+#line 81
+ testRunner.Given("the following votes on the first tour", ((string)(null)), table9, "Given ");
+#line hidden
+#line 87
+ testRunner.And("the closing of the first tour is true", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                            "FirstName",
+                            "LastName",
+                            "votes"});
+                table10.AddRow(new string[] {
+                            "Monica",
+                            "Geller",
+                            "2"});
+                table10.AddRow(new string[] {
+                            "Ross",
+                            "Geller",
+                            "1"});
+                table10.AddRow(new string[] {
+                            "Blank",
+                            "Votes",
+                            "4"});
+#line 88
+ testRunner.And("the following votes on the second tour", ((string)(null)), table10, "And ");
+#line hidden
+#line 93
+ testRunner.And("the closing of the second tour is true", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 94
+ testRunner.When("results are calculated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 95
+ testRunner.Then("the result should be Monica Geller", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

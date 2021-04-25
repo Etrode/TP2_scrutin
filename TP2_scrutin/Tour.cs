@@ -28,21 +28,25 @@ namespace TP2_scrutin
                     double total = 0;
                     foreach (KeyValuePair<Candidat, int> currentCandidatVotes in this.CandidatVotes)
                     {
-                        total += currentCandidatVotes.Value;
+                        if (!currentCandidatVotes.Key.DisplayFirstAndLastName().Equals("Blank Votes"))
+                            total += currentCandidatVotes.Value;
                     }
 
                     foreach (KeyValuePair<Candidat, int> currentCandidatVotes in CandidatVotes)
                     {
-                        double percent = 0.0;
-                        if (total != 0)
+                        if (!currentCandidatVotes.Key.DisplayFirstAndLastName().Equals("Blank Votes"))
                         {
-                            percent = (currentCandidatVotes.Value / total) * 100;
+                            double percent = 0.0;
+                            if (total != 0)
+                            {
+                                percent = (currentCandidatVotes.Value / total) * 100;
+                            }
+                            else
+                            {
+                                percent = 0.0;
+                            }
+                            Console.WriteLine("Candidat = " + currentCandidatVotes.Key.DisplayFirstAndLastName() + " | Votes = " + currentCandidatVotes.Value + " | pourcentage = " + Math.Round(percent, 2));
                         }
-                        else
-                        {
-                            percent = 0.0;
-                        }
-                        Console.WriteLine("Candidat = " + currentCandidatVotes.Key + " | Votes = " + currentCandidatVotes.Value + " | pourcentage = " + Math.Round(percent, 2));                  
                     }
                 }
                     
