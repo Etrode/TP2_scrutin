@@ -1,4 +1,5 @@
 ﻿using TechTalk.SpecFlow;
+using FluentAssertions;
 
 namespace TP2_scrutin.Specs.Steps
 {
@@ -10,49 +11,55 @@ namespace TP2_scrutin.Specs.Steps
 
         private readonly ScenarioContext _scenarioContext;
 
+        private readonly Scrutin _scrutin = new Scrutin();
+
+        private string _result;
+
         public ScrutinStepDefinitions(ScenarioContext scenarioContext)
         {
             _scenarioContext = scenarioContext;
         }
 
-        [Given("the first number is (.*)")]
-        public void GivenTheFirstNumberIs(int number)
+        [Given(@"the following votes on the first tour")]
+        public void GivenTheFollowingVotes(Table table)
         {
-            //TODO: implement arrange (precondition) logic
-            // For storing and retrieving scenario-specific data see https://go.specflow.org/doc-sharingdata
-            // To use the multiline text or the table argument of the scenario,
-            // additional string/Table parameters can be defined on the step definition
-            // method. 
+            Tour tour = new Tour(); // Nouveau tour
+            foreach (TableRow row in table.Rows)
+            {
+                // FirstName
+                string firstName = row[0];
 
-            _scenarioContext.Pending();
+                // LastName
+                string lastName = row[1];
+
+                // Votes
+                int votes = int.Parse(row[2]);
+
+                Candidat candidat = new Candidat(firstName, lastName);
+                tour.CandidatVotes.Add(candidat, votes);
+            }
+            this._scrutin.Tour1 = tour;
         }
 
-        [Given("the second number is (.*)")]
-        public void GivenTheSecondNumberIs(int number)
+        [Given(@"the closing of the first tour is (.*)")]
+        public void GivenTheClosingOfTheFirstTourIsTrue(bool closure)
         {
-            //TODO: implement arrange (precondition) logic
-            // For storing and retrieving scenario-specific data see https://go.specflow.org/doc-sharingdata
-            // To use the multiline text or the table argument of the scenario,
-            // additional string/Table parameters can be defined on the step definition
-            // method. 
-
-            _scenarioContext.Pending();
+            // Si closure = true, alors affichage des candidats + votes + pourcentage > voir Console.WriteLine dans la classe Tour
+            this._scrutin.Tour1.Closure = closure;
         }
 
-        [When("the two numbers are added")]
-        public void WhenTheTwoNumbersAreAdded()
+        [When(@"results are calculated")]
+        public void WhenResultsAreCalculated()
         {
-            //TODO: implement act (action) logic
-
-            _scenarioContext.Pending();
+            this._result = this._scrutin.Calculate();
         }
+
+
 
         [Then("the result should be (.*)")]
-        public void ThenTheResultShouldBe(int result)
+        public void ThenTheResultShouldBe(string result)
         {
-            //TODO: implement assert (verification) logic
-
-            _scenarioContext.Pending();
+            this._result.Should().Be(result);
         }
     }
 }
